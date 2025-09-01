@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func NewRoute(db *gorm.DB) *gin.Engine {
+func NewRouter(db *gorm.DB) *gin.Engine {
 	r := gin.Default()
 	r.GET("/health", func(c *gin.Context) {
 		//Optioanlly ping DB to confirm connectivity

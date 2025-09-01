@@ -1,4 +1,4 @@
-module Backend
+module github.com/carloszurcjose/TFT
 
 go 1.25.0
 

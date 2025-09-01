@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Go: Launch Server (Postgres)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/server",
+            "env": {
+                "PGHOST": "localhost",
+                "PGPORT": "5432",
+                "PGUSER": "postgres",
+                "PGPASSWORD": "postgres",
+                "PGADATABASE": "tft",
+                "PGSSLMODE": "disable"
+            }
+        }
+    ]
+}

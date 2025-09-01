@@ -14,5 +14,18 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: tft-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  #Login email
+      PGADMIN_DEFAULT_PASSWORD: admin #login password
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+
 volumes:
   pgdata:
